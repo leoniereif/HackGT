@@ -15,7 +15,6 @@ function onPoseEdge(pose, edge)
 	    	if workingOut == false then
 	    		workingOut = true
 				myo.debug("STARTING EXORCISE")
-				printLocationData()
 	    	else
 	    		workingOut = false
 				myo.debug("STOPPING EXORCISE")
