@@ -1,5 +1,5 @@
 //
-//  WorkoutTableViewController.swift
+//  OverviewTableViewController.swift
 //  MyoFitness
 //
 //  Created by Leonie Reif on 25/09/15.
@@ -8,16 +8,10 @@
 
 import UIKit
 
-class WorkoutTableViewController: UITableViewController {
-    
-    let myWorkoutList = WorkoutList()
-    
+class OverviewTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /**let longpress = UILongPressGestureRecognizer(target: self, action: "longPressGestureRecognized:")
-        
-        tableView.addGestureRecognizer(longpress)*/
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -38,20 +32,17 @@ class WorkoutTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myWorkoutList.workouts.count
+        // #warning Incomplete implementation, return the number of rows
+        return 1
     }
     
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath)
-        
-        let item = myWorkoutList.workouts[indexPath.row]
-        
-        cell.textLabel?.text = item.name
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("OverviewViewCell", forIndexPath: indexPath)
+    
         return cell
     }
-    
+
     
     /*
     // Override to support conditional editing of the table view.
@@ -73,12 +64,12 @@ class WorkoutTableViewController: UITableViewController {
     }
     */
     
-    
+    /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
     
     }
-    
+    */
     
     /*
     // Override to support conditional rearranging of the table view.
@@ -98,5 +89,5 @@ class WorkoutTableViewController: UITableViewController {
     }
     */
 
-    
+
 }
