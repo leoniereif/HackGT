@@ -14,17 +14,7 @@ class WorkoutTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.editing = true
-        
-        /**let longpress = UILongPressGestureRecognizer(target: self, action: "longPressGestureRecognized:")
-        
-        tableView.addGestureRecognizer(longpress)*/
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView.editing = false
     }
     
     override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
@@ -37,7 +27,6 @@ class WorkoutTableViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
@@ -50,35 +39,31 @@ class WorkoutTableViewController: UITableViewController {
         return myWorkoutList.workouts.count
     }
     
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath)
-        
         cell.accessoryType = .Checkmark
-        
         let item = myWorkoutList.workouts[indexPath.row]
-        
-        cell.textLabel?.text = "\u{2713}" + item.name
-        
-        if cell.accessoryType == UITableViewCellAccessoryType.Checkmark {
-            cell.accessoryType = .None
-            cell.textLabel?.text = item.name
-        } else {
-            cell.accessoryType = .Checkmark
-            cell.textLabel?.text = "\u{2713}" + item.name
-        }
-        
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = "Burns " + "\(item.calories)" + " calories"
+        let txtField: UITextField = UITextField(frame: CGRect(x: 280, y: 20, width: 40.00, height: 20.00));
+        txtField.text = "10"
+        cell.contentView.addSubview(txtField)
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
+        let tf = cell?.contentView.subviews[2] as! UITextField
         if cell!.accessoryType == UITableViewCellAccessoryType.Checkmark {
             cell?.accessoryType = .None
+            tf.text = ""
+            tf.enabled = false
         } else {
             cell?.accessoryType = .Checkmark
+            tf.text = "10"
+            tf.enabled = true
         }
-        print("hiug")
     }
     
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -90,7 +75,33 @@ class WorkoutTableViewController: UITableViewController {
         myWorkoutList.workouts.removeAtIndex(sourceIndexPath.row)
         myWorkoutList.workouts.insert(movedObject, atIndex: destinationIndexPath.row)
     }
-
+    
+    @IBAction func edit(sender: AnyObject) {
+        if(self.editing) {
+            navigationItem.rightBarButtonItem?.title = ""
+            super.setEditing(false, animated: false)
+            for (var row = 0; row < tableView.numberOfRowsInSection(0); row++) {
+                let tf = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0))?.contentView.subviews[2] as! UITextField
+                tf.enabled = false
+                tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0))?.accessoryType = .None
+                tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0))?.userInteractionEnabled = false
+            }
+        } else {
+            navigationItem.title = "Edit Order"
+            //don't display unchecked
+            for (var row = 0; row < tableView.numberOfRowsInSection(0); row++) {
+                let tf = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0))?.contentView.subviews[2] as! UITextField
+                tf.enabled = false
+                if(tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0))?.accessoryType == UITableViewCellAccessoryType.None) {
+                    myWorkoutList.workouts.removeAtIndex(row)
+                    tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: row, inSection: 0)], withRowAnimation: .Fade)
+                }
+            }
+            navigationItem.rightBarButtonItem?.title = "Done"
+            super.setEditing(true, animated: true)
+        }
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.
@@ -130,6 +141,6 @@ class WorkoutTableViewController: UITableViewController {
     // Pass the selected object to the new view controller.
     }
     */
-
+    
     
 }
