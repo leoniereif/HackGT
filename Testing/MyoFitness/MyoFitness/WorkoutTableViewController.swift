@@ -46,7 +46,7 @@ class WorkoutTableViewController: UITableViewController {
         let item = myWorkoutList.workouts[indexPath.row]
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "Burns " + "\(item.calories)" + " calories"
-        let txtField: UITextField = UITextField(frame: CGRect(x: 280, y: 20, width: 40.00, height: 20.00));
+        let txtField: UITextField = UITextField(frame: CGRect(x: 260, y: 17, width: 40.00, height: 20.00));
         txtField.text = "10"
         cell.contentView.addSubview(txtField)
         return cell
@@ -77,16 +77,22 @@ class WorkoutTableViewController: UITableViewController {
     }
     
     @IBAction func edit(sender: AnyObject) {
+        
         if(self.editing) {
+            
             navigationItem.rightBarButtonItem?.title = ""
-            super.setEditing(false, animated: false)
+            
+            
             for (var row = 0; row < tableView.numberOfRowsInSection(0); row++) {
                 let tf = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0))?.contentView.subviews[2] as! UITextField
                 tf.enabled = false
                 tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0))?.accessoryType = .None
                 tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0))?.userInteractionEnabled = false
             }
+            super.setEditing(false, animated: false)
+            
         } else {
+            
             navigationItem.title = "Edit Order"
             //don't display unchecked
             for (var row = 0; row < tableView.numberOfRowsInSection(0); row++) {
@@ -99,6 +105,7 @@ class WorkoutTableViewController: UITableViewController {
             }
             navigationItem.rightBarButtonItem?.title = "Done"
             super.setEditing(true, animated: true)
+            
         }
     }
     

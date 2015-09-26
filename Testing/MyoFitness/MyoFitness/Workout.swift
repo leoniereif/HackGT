@@ -11,9 +11,13 @@ import Foundation
 class Workout: NSObject {
     let name: String
     let calories: Int
+    var dataone: [float_t]
+    var datatwo: [float_t]
     
     init(name: String, calories: Int) {
         self.name = name
         self.calories = calories
+        self.dataone = []
+        self.datatwo = []
     }
 }
