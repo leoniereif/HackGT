@@ -15,7 +15,7 @@ class WorkoutList {
     
     init() {
         let curl = Workout(name: "Curl", calories: 20)
-        let squads = Workout(name: "Squads", calories: 30)
+        let squads = Workout(name: "Squats", calories: 30)
         let bench = Workout(name: "Bench Press", calories: 40)
         let lateral = Workout(name: "Lateral Rises", calories: 50)
         let triceps = Workout(name: "Triceps Press", calories: 60)
