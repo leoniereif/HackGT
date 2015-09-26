@@ -9,6 +9,8 @@
 import UIKit
 
 class OverviewTableViewController: UITableViewController {
+    
+    let workoutHistory = WorkoutHistory()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +35,55 @@ class OverviewTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return workoutHistory.history.count
     }
+
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("OverviewViewCell", forIndexPath: indexPath)
     
+        cell.accessoryType = .Checkmark
+        
+        let item = workoutHistory.history[indexPath.row]
+        
+        cell.textLabel?.text = "\u{2713}" + item.date
+        
+        if cell.accessoryType == UITableViewCellAccessoryType.Checkmark {
+            cell.accessoryType = .None
+            cell.textLabel?.text = item.date + "  -   " + String(item.carlory) + " Calories"
+            cell.textLabel?.textAlignment = .Center
+            //cell.detailTextLabel?.textAlignment = .Right
+        } else {
+            cell.accessoryType = .Checkmark
+            cell.textLabel?.text = "\u{2713}" + item.date
+        }
+        
         return cell
+        
     }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        if cell!.accessoryType == UITableViewCellAccessoryType.Checkmark {
+            cell?.accessoryType = .None
+        } else {
+            cell?.accessoryType = .Checkmark
+        }
+        print("hiug")
+    }
+    
+    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true // Yes, the table view can be reordered
+    }
+    
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        let movedObject = workoutHistory.history[sourceIndexPath.row]
+        workoutHistory.history.removeAtIndex(sourceIndexPath.row)
+        workoutHistory.history.insert(movedObject, atIndex: destinationIndexPath.row)
+    }
+
 
     
     /*
