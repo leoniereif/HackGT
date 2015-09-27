@@ -112,18 +112,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhF-Yl-Qqi">
+                                <rect key="frame" x="75" y="179" width="117" height="30"/>
+                                <state key="normal" title="Let's get started!"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fWH-5m-daB" firstAttribute="top" secondItem="MGp-qt-rbe" secondAttribute="bottom" constant="361" id="ajC-uz-aAO"/>
                             <constraint firstItem="MGp-qt-rbe" firstAttribute="leading" secondItem="dWU-ms-d1J" secondAttribute="leadingMargin" constant="55" id="cwN-hT-cx0"/>
                             <constraint firstItem="MGp-qt-rbe" firstAttribute="top" secondItem="8yj-dB-Fx5" secondAttribute="bottom" constant="48" id="glO-xQ-To1"/>
+                            <constraint firstItem="mhF-Yl-Qqi" firstAttribute="leading" secondItem="MGp-qt-rbe" secondAttribute="leading" id="iJm-8b-iGg"/>
+                            <constraint firstItem="mhF-Yl-Qqi" firstAttribute="top" secondItem="8yj-dB-Fx5" secondAttribute="bottom" constant="159" id="rYV-Wi-bT9"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oc7-Zx-w2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4285" y="-282"/>
+            <point key="canvasLocation" x="4457" y="-219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5wD-3m-PEb">
