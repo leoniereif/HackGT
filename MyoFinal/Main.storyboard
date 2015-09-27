@@ -106,7 +106,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect to your Myo - Please sync!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGp-qt-rbe">
                                 <rect key="frame" x="75" y="68" width="328" height="171"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="328" id="v9r-1R-AYG"/>
+                                    <constraint firstAttribute="width" constant="328" id="wK7-yf-Cdm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -116,20 +116,74 @@
                                 <rect key="frame" x="75" y="179" width="117" height="30"/>
                                 <state key="normal" title="Let's get started!"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnD-21-8X0">
+                                <rect key="frame" x="75" y="247" width="62" height="30"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="vDp-6E-kEc" kind="presentation" id="uez-A6-ZbB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fWH-5m-daB" firstAttribute="top" secondItem="MGp-qt-rbe" secondAttribute="bottom" constant="361" id="ajC-uz-aAO"/>
-                            <constraint firstItem="MGp-qt-rbe" firstAttribute="leading" secondItem="dWU-ms-d1J" secondAttribute="leadingMargin" constant="55" id="cwN-hT-cx0"/>
-                            <constraint firstItem="MGp-qt-rbe" firstAttribute="top" secondItem="8yj-dB-Fx5" secondAttribute="bottom" constant="48" id="glO-xQ-To1"/>
-                            <constraint firstItem="mhF-Yl-Qqi" firstAttribute="leading" secondItem="MGp-qt-rbe" secondAttribute="leading" id="iJm-8b-iGg"/>
-                            <constraint firstItem="mhF-Yl-Qqi" firstAttribute="top" secondItem="8yj-dB-Fx5" secondAttribute="bottom" constant="159" id="rYV-Wi-bT9"/>
+                            <constraint firstItem="MGp-qt-rbe" firstAttribute="leading" secondItem="dWU-ms-d1J" secondAttribute="leadingMargin" constant="55" id="4Kl-H0-oZZ"/>
+                            <constraint firstItem="wnD-21-8X0" firstAttribute="top" secondItem="mhF-Yl-Qqi" secondAttribute="bottom" constant="38" id="5uf-Cm-VG8"/>
+                            <constraint firstItem="mhF-Yl-Qqi" firstAttribute="top" secondItem="8yj-dB-Fx5" secondAttribute="bottom" constant="159" id="GET-ub-UbS"/>
+                            <constraint firstItem="wnD-21-8X0" firstAttribute="top" secondItem="MGp-qt-rbe" secondAttribute="bottom" constant="8" symbolic="YES" id="Vsz-Mz-7mX"/>
+                            <constraint firstItem="MGp-qt-rbe" firstAttribute="top" secondItem="8yj-dB-Fx5" secondAttribute="bottom" constant="48" id="cqh-q6-B2l"/>
+                            <constraint firstItem="mhF-Yl-Qqi" firstAttribute="leading" secondItem="MGp-qt-rbe" secondAttribute="leading" id="fYi-4E-37R"/>
+                            <constraint firstItem="wnD-21-8X0" firstAttribute="leading" secondItem="mhF-Yl-Qqi" secondAttribute="leading" id="iaT-6L-LYw"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oc7-Zx-w2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4457" y="-219"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="388-FC-yuT">
+            <objects>
+                <viewController id="vDp-6E-kEc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VvC-99-1XI"/>
+                        <viewControllerLayoutGuide type="bottom" id="2vR-wT-Qfh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cam-Hx-56u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Nr. 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xx9-dP-cYA">
+                                <rect key="frame" x="107" y="132" width="103" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vLA-JL-o01"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="555" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aJ-lI-Rco">
+                                <rect key="frame" x="107" y="148" width="83" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="Um1-uW-aS2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xx9-dP-cYA" firstAttribute="leading" secondItem="1aJ-lI-Rco" secondAttribute="leading" id="BY5-dP-JoV"/>
+                            <constraint firstItem="1aJ-lI-Rco" firstAttribute="top" secondItem="xx9-dP-cYA" secondAttribute="bottom" constant="-5" id="EDJ-yg-n8V"/>
+                            <constraint firstItem="xx9-dP-cYA" firstAttribute="top" secondItem="VvC-99-1XI" secondAttribute="bottom" constant="112" id="OMc-GD-jD8"/>
+                            <constraint firstItem="2vR-wT-Qfh" firstAttribute="top" secondItem="1aJ-lI-Rco" secondAttribute="bottom" constant="392" id="kF4-ip-Kjn"/>
+                            <constraint firstItem="xx9-dP-cYA" firstAttribute="leading" secondItem="cam-Hx-56u" secondAttribute="leadingMargin" constant="87" id="oOa-G6-kbk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Wk-Ls-0RC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5127" y="-219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5wD-3m-PEb">
