@@ -76,8 +76,13 @@ class WorkoutTableViewController: UITableViewController {
         myWorkoutList.workouts.insert(movedObject, atIndex: destinationIndexPath.row)
     }
     
+    var done:Bool = false
     @IBAction func edit(sender: AnyObject) {
-        
+        if done {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("connectionview")
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
         if(self.editing) {
             
             navigationItem.rightBarButtonItem?.title = ""
@@ -91,7 +96,6 @@ class WorkoutTableViewController: UITableViewController {
             super.setEditing(false, animated: false)
             
         } else {
-            
             navigationItem.title = "Edit Order"
             //don't display unchecked
             for (var row = 0; row < tableView.numberOfRowsInSection(0); row++) {
@@ -102,12 +106,14 @@ class WorkoutTableViewController: UITableViewController {
                     tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: row, inSection: 0)], withRowAnimation: .Fade)
                 }
             }
+            done = true
             navigationItem.rightBarButtonItem?.title = "Done"
+            //navigationItem.rightBarButtonItem?.enabled = false
             super.setEditing(true, animated: true)
             
         }
     }
-    
+
     func highlightCell (row: Int) {
         let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0))
         cell!.layer.borderWidth = 2.0
