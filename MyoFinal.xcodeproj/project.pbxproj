@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAFA0DA31BB7733600752F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA0DA21BB7733600752F4E /* AppDelegate.swift */; };
+		DAFA0DAA1BB7733600752F4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFA0DA91BB7733600752F4E /* Assets.xcassets */; };
+		DAFA0DAD1BB7733600752F4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFA0DAB1BB7733600752F4E /* LaunchScreen.storyboard */; };
+		DAFA0DB51BB7738E00752F4E /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFA0DB41BB7738E00752F4E /* MyoKit.framework */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DBF1BB782AA00752F4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA0DBA1BB782AA00752F4E /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DC01BB782AA00752F4E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA0DBB1BB782AA00752F4E /* Workout.swift */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DC11BB782AA00752F4E /* WorkoutHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA0DBC1BB782AA00752F4E /* WorkoutHistory.swift */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DC21BB782AA00752F4E /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA0DBD1BB782AA00752F4E /* WorkoutList.swift */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DC31BB782AA00752F4E /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA0DBE1BB782AA00752F4E /* WorkoutTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DC51BB782B700752F4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFA0DC41BB782B700752F4E /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DCB1BB783CE00752F4E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAFA0DCA1BB783CE00752F4E /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DCD1BB785AE00752F4E /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA0DCC1BB785AE00752F4E /* OverviewTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DCF1BB7874400752F4E /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA0DCE1BB7874400752F4E /* History.swift */; settings = {ASSET_TAGS = (); }; };
+		DAFA0DD31BB7896900752F4E /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA0DD21BB7896900752F4E /* WorkoutSession.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DAFA0D9F1BB7733600752F4E /* MyoFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyoFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFA0DA21BB7733600752F4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAFA0DA91BB7733600752F4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAFA0DAC1BB7733600752F4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAFA0DB41BB7738E00752F4E /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = "Myo-iOS-SDK-0.5.2/MyoKit.framework"; sourceTree = "<group>"; };
+		DAFA0DB61BB773F300752F4E /* MyoFinal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyoFinal-Bridging-Header.h"; sourceTree = "<group>"; };
+		DAFA0DBA1BB782AA00752F4E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAFA0DBB1BB782AA00752F4E /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		DAFA0DBC1BB782AA00752F4E /* WorkoutHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutHistory.swift; sourceTree = "<group>"; };
+		DAFA0DBD1BB782AA00752F4E /* WorkoutList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
+		DAFA0DBE1BB782AA00752F4E /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
+		DAFA0DC41BB782B700752F4E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DAFA0DCA1BB783CE00752F4E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAFA0DCC1BB785AE00752F4E /* OverviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewController.swift; sourceTree = "<group>"; };
+		DAFA0DCE1BB7874400752F4E /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		DAFA0DD21BB7896900752F4E /* WorkoutSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAFA0D9C1BB7733600752F4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFA0DB51BB7738E00752F4E /* MyoKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAFA0D961BB7733600752F4E = {
+			isa = PBXGroup;
+			children = (
+				DAFA0DB61BB773F300752F4E /* MyoFinal-Bridging-Header.h */,
+				DAFA0DB41BB7738E00752F4E /* MyoKit.framework */,
+				DAFA0DA11BB7733600752F4E /* MyoFinal */,
+				DAFA0DA01BB7733600752F4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAFA0DA01BB7733600752F4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAFA0D9F1BB7733600752F4E /* MyoFinal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAFA0DA11BB7733600752F4E /* MyoFinal */ = {
+			isa = PBXGroup;
+			children = (
+				DAFA0DC41BB782B700752F4E /* Main.storyboard */,
+				DAFA0DAB1BB7733600752F4E /* LaunchScreen.storyboard */,
+				DAFA0DBA1BB782AA00752F4E /* ViewController.swift */,
+				DAFA0DA21BB7733600752F4E /* AppDelegate.swift */,
+				DAFA0DBC1BB782AA00752F4E /* WorkoutHistory.swift */,
+				DAFA0DCC1BB785AE00752F4E /* OverviewTableViewController.swift */,
+				DAFA0DCE1BB7874400752F4E /* History.swift */,
+				DAFA0DBB1BB782AA00752F4E /* Workout.swift */,
+				DAFA0DBD1BB782AA00752F4E /* WorkoutList.swift */,
+				DAFA0DBE1BB782AA00752F4E /* WorkoutTableViewController.swift */,
+				DAFA0DD21BB7896900752F4E /* WorkoutSession.swift */,
+				DAFA0DA91BB7733600752F4E /* Assets.xcassets */,
+				DAFA0DCA1BB783CE00752F4E /* Info.plist */,
+			);
+			path = MyoFinal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAFA0D9E1BB7733600752F4E /* MyoFinal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAFA0DB11BB7733600752F4E /* Build configuration list for PBXNativeTarget "MyoFinal" */;
+			buildPhases = (
+				DAFA0D9B1BB7733600752F4E /* Sources */,
+				DAFA0D9C1BB7733600752F4E /* Frameworks */,
+				DAFA0D9D1BB7733600752F4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyoFinal;
+			productName = MyoFinal;
+			productReference = DAFA0D9F1BB7733600752F4E /* MyoFinal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAFA0D971BB7733600752F4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = DanielShea;
+				TargetAttributes = {
+					DAFA0D9E1BB7733600752F4E = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = L4P8J6E7V7;
+					};
+				};
+			};
+			buildConfigurationList = DAFA0D9A1BB7733600752F4E /* Build configuration list for PBXProject "MyoFinal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAFA0D961BB7733600752F4E;
+			productRefGroup = DAFA0DA01BB7733600752F4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAFA0D9E1BB7733600752F4E /* MyoFinal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAFA0D9D1BB7733600752F4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFA0DCB1BB783CE00752F4E /* Info.plist in Resources */,
+				DAFA0DC51BB782B700752F4E /* Main.storyboard in Resources */,
+				DAFA0DAD1BB7733600752F4E /* LaunchScreen.storyboard in Resources */,
+				DAFA0DAA1BB7733600752F4E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAFA0D9B1BB7733600752F4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFA0DCF1BB7874400752F4E /* History.swift in Sources */,
+				DAFA0DBF1BB782AA00752F4E /* ViewController.swift in Sources */,
+				DAFA0DA31BB7733600752F4E /* AppDelegate.swift in Sources */,
+				DAFA0DC21BB782AA00752F4E /* WorkoutList.swift in Sources */,
+				DAFA0DC11BB782AA00752F4E /* WorkoutHistory.swift in Sources */,
+				DAFA0DD31BB7896900752F4E /* WorkoutSession.swift in Sources */,
+				DAFA0DC01BB782AA00752F4E /* Workout.swift in Sources */,
+				DAFA0DCD1BB785AE00752F4E /* OverviewTableViewController.swift in Sources */,
+				DAFA0DC31BB782AA00752F4E /* WorkoutTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DAFA0DAB1BB7733600752F4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAFA0DAC1BB7733600752F4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAFA0DAF1BB7733600752F4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAFA0DB01BB7733600752F4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAFA0DB21BB7733600752F4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Myo-iOS-SDK-0.5.2",
+				);
+				INFOPLIST_FILE = MyoFinal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HackGT.MyoFinal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyoFinal-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		DAFA0DB31BB7733600752F4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Myo-iOS-SDK-0.5.2",
+				);
+				INFOPLIST_FILE = MyoFinal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HackGT.MyoFinal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyoFinal-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAFA0D9A1BB7733600752F4E /* Build configuration list for PBXProject "MyoFinal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFA0DAF1BB7733600752F4E /* Debug */,
+				DAFA0DB01BB7733600752F4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAFA0DB11BB7733600752F4E /* Build configuration list for PBXNativeTarget "MyoFinal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFA0DB21BB7733600752F4E /* Debug */,
+				DAFA0DB31BB7733600752F4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAFA0D971BB7733600752F4E /* Project object */;
+}
